@@ -5,12 +5,12 @@ A proposta é fornecer scripts e recursos para aplicar **boas práticas de segur
 
 ---
 
-## 🧠 O que você encontra aqui
+## Conteúdo
 
-- ✅ Script de hardening básico (`hardening.sh`)
-- ✅ Prints de execução real em máquina virtual
-- ✅ Execução remota via SSH simulando ambiente real
-- ✅ Expansões futuras para ferramentas como `fail2ban`, `ufw`, `ssh`, etc.
+- Script de hardening básico (`hardening.sh`)
+- Prints de execução real em máquina virtual
+- Execução remota via SSH simulando ambiente real
+- Expansões futuras para ferramentas como `fail2ban`, `ufw`, `ssh`, etc.
 
 ---
 
