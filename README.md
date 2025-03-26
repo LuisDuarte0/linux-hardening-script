@@ -1,62 +1,53 @@
-# Linux Hardening Script
+# 🔐 Script de Hardening Básico para Servidores Linux
 
-Este repositório contém um script de **hardening básico para sistemas Linux**, voltado para estudantes e profissionais que desejam aplicar boas práticas de segurança em servidores.
+## 🧠 Sobre o Projeto
 
----
+Este repositório apresenta um script Bash simples e funcional que realiza práticas fundamentais de **hardening** (endurecimento de segurança) em servidores Linux, mais especificamente no Ubuntu Server 24.04.2 LTS.
 
-## 🔐 Objetivo do Projeto
+A ideia surgiu da necessidade de consolidar práticas reais de segurança da informação, desde a configuração manual de uma VM, até a conexão via SSH e aplicação de melhorias diretas no sistema.
 
-Aplicar medidas essenciais de segurança (hardening) em sistemas Linux, incluindo:
-- Atualização de pacotes
-- Configuração de firewall
-- Restrição de acesso root remoto via SSH
-- Ajuste de permissões de arquivos sensíveis
+Tudo foi feito do zero, incluindo:
 
-Essas ações aumentam a resiliência do sistema contra ameaças e ataques básicos.
+- Instalação manual da máquina virtual
+- Configuração de teclado e rede
+- Acesso remoto via SSH
+- Criação e execução de um script de hardening com boas práticas
 
----
-
-## ⚖️ O que o script faz
-
-- Atualiza os pacotes do sistema com `apt`
-- Ativa o firewall UFW, bloqueando tudo exceto conexões SSH
-- Garante que o login remoto com root esteja desabilitado no SSH
-- Verifica e corrige permissões em `/etc/passwd` e `/etc/shadow`
+O projeto visa demonstrar conhecimento prático em **segurança, infraestrutura e automação**.
 
 ---
 
-## 🛠️ Como executar
+## ⚙️ O que o Script Faz
 
-> Recomendado rodar em uma VM Ubuntu Server (20.04 ou 22.04 LTS)
-
-```bash
-chmod +x hardening.sh
-sudo ./hardening.sh
-```
-
-> ⚠️ **Atenção**: Sempre revise os comandos antes de rodar scripts de hardening em ambientes reais.
+- Atualiza todos os pacotes do sistema
+- Ativa e configura o firewall UFW, liberando apenas a porta do SSH
+- Desabilita o login remoto via root
+- Corrige permissões sensíveis dos arquivos `/etc/passwd` e `/etc/shadow`
+- Apresenta mensagens visuais a cada etapa do processo
 
 ---
 
-## 📃 Checklist de Segurança Aplicado
+## 📸 Demonstrações
 
-- [x] Atualização do sistema
-- [x] Firewall ativo com regras restritivas
-- [x] SSH sem acesso root remoto
-- [x] Permissões reforçadas em arquivos críticos
+### 🔹 Código do Script
 
----
-
-## 🧐 Aprendizados
-
-- Introdução à segurança de servidores Linux
-- Scripts de automação para aplicação de boas práticas
-- Entendimento das vulnerabilidades comuns em sistemas mal configurados
+![imagem1](./imagem1.png)
 
 ---
 
-## 🔗 Referências
+### 🔹 Acesso remoto via SSH
 
-- [CIS Benchmarks para Linux](https://www.cisecurity.org/cis-benchmarks/)
-- [OWASP Server Hardening Guidelines](https://owasp.org/www-project-server-security/)
-- [Ubuntu Hardening Guide](https://wiki.ubuntu.com/Security/Features)
+Conexão feita pelo terminal do Windows usando IP local da VM:
+
+![imagem2](./imagem2.png)
+
+---
+
+### 🔹 Execução do Script com sucesso
+
+Mensagem de conclusão e alterações aplicadas corretamente:
+
+![imagem3](./imagem3.png)
+
+---
+
