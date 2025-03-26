@@ -1,58 +1,33 @@
 # 🛡️ Secure Linux Baseline – Endurecimento de Segurança para Servidores Ubuntu
 
-Este repositório é uma base prática e didática de **hardening em servidores Linux**, com foco inicial no Ubuntu Server.  
-A proposta é fornecer scripts e recursos para aplicar **boas práticas de segurança**, partindo do zero até o mínimo recomendado em ambientes reais.
+Este repositório é uma base prática de **hardening e automação de segurança** em servidores Linux.  
+O objetivo é fornecer um conjunto de scripts que implementam boas práticas de **cibersegurança, infraestrutura e automação com shell script**, com foco no Ubuntu Server.
 
 ---
 
-## Conteúdo
+## Objetivo do Projeto
 
-1. **Script de hardening básico (`hardening.sh`)**
-- Prints de execução real em máquina virtual
-- Execução remota via SSH simulando ambiente real
-2. **`scripts/fail2ban.sh`: instala e configura o Fail2Ban para proteção contra tentativas de força bruta via SSH.**
+Desenvolver diferentes inteligências técnicas e estratégicas
 
----
-
-## 📌 Finalidade
-
-Este projeto foi construído manualmente, simulando um cenário real de aplicação:
-
-- Instalação manual do Ubuntu Server em VM
-- Configuração de rede, teclado e acesso SSH
-- Criação de script de automação com foco em segurança
-- Execução e validação via terminal remoto
-
-O objetivo é consolidar conhecimentos em **cibersegurança, infraestrutura e shell scripting**, com potencial de aplicação prática imediata.
+- Práticas de hardening, SSH seguro, firewall, monitoramento de usuário
+- Administração de Sistemas Linux (comandos, serviços, permissões, logs)
+- **⚙️ Shell Scripting**: automação de tarefas administrativas e de segurança
+- **📡 Redes**: controle de portas e protocolos, proteção de acesso remoto
+- **🔧 Troubleshooting real**: instalação e configuração de VMs, teclado, rede, UFW e SSH manualmente
 
 ---
 
-## 🔧 O que o Script Faz
+## 🔧 Scripts Disponíveis
 
-- Atualiza pacotes do sistema
-- Ativa e configura o firewall UFW (liberando apenas SSH)
-- Desativa login remoto de root via SSH
-- Corrige permissões sensíveis dos arquivos `/etc/passwd` e `/etc/shadow`
-- Apresenta mensagens de sucesso/falha durante execução
+Todos os scripts estão localizados na pasta [`/scripts`](./scripts):
 
----
-
-## 🖼️ Demonstrações
-
-### 📄 Código do Script
-
-![imagem1](./imagem1.png)
+| Script                | Função                                                                 |
+|-----------------------|------------------------------------------------------------------------|
+| `hardening.sh`        | Script principal com boas práticas básicas de segurança para o sistema |
+| `fail2ban.sh`         | Instala e configura o Fail2Ban para proteção contra ataques de força bruta no SSH |
+| `ssh-lockdown.sh`     | Restringe o acesso remoto ao servidor, desativando autenticação por senha |
+| `ufw-monitor.sh`      | Exibe regras do firewall UFW, portas abertas e serviços escutando       |
+| `user-audit.sh`       | Realiza auditoria dos usuários, acessos recentes e permissões elevadas |
 
 ---
 
-### 🔐 Conexão SSH na máquina virtual
-
-![imagem2](./imagem2.png)
-
----
-
-### ✅ Execução concluída com sucesso
-
-![imagem3](./imagem3.png)
-
----
